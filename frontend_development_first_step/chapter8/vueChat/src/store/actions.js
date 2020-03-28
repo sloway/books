@@ -43,10 +43,8 @@ export default {
     const json = await response.json()
 
     if(json.result === 'ok' ) {
-      const messages = await fetch_get_messages(cname)
-      console.log("")
-      commit(SET_MESSAGES, messages)
-      console.log("")
+      const messages = await fetch_get_messages(cname)      
+      commit(SET_MESSAGES, messages)      
     }
   }
 }
